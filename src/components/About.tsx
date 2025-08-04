@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
@@ -166,7 +166,7 @@ export default function About() {
               
               <div className='space-y-4 text-text/80 leading-relaxed'>
                 <p>
-                  I'm a Software Engineer with experience in ML, full-stack development, 
+                  I&apos;m a Software Engineer with experience in ML, full-stack development, 
                   and data engineering. I graduated with a degree in Computer Science from UCLA in 2025 (
                   <button 
                     onClick={triggerBruinsConfetti}
@@ -181,7 +181,7 @@ export default function About() {
                   spread positive impact through technology, whether that be through small web apps or large-scale systems. 
                 </p>
                 <p>
-                  When I'm not coding, you'll find me at the gym, watching basketball, trying new food places, taking photos,
+                  When I&apos;m not coding, you&apos;ll find me at the gym, watching basketball, trying new food places, taking photos,
                   or experimenting with new matcha drinks for my home cafe (hopefully a real cafe someday). 🍵
                 </p>
               </div>
