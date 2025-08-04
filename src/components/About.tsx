@@ -75,7 +75,7 @@ export default function About() {
   };
 
   return (
-    <section id='about' className='min-h-screen flex flex-col justify-center items-center px-4 text-text'>
+    <section id='about' className='min-h-screen flex flex-col justify-center items-center px-4 pt-20 md:pt-4 text-text'>
       <div className='max-w-4xl mx-auto w-full'>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

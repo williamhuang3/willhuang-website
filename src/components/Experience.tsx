@@ -67,7 +67,7 @@ export default function Experience() {
 
   return (
     <section id='experience' className='min-h-screen flex flex-col pt-24 px-4 text-text'>
-      <h2 className='text-3xl font-bold mb-12 text-center'>Experience</h2>
+      <h2 className='text-4xl font-bold mb-12 text-center'>Experience</h2>
       
       <div className='flex gap-8 max-w-6xl mx-auto w-full'>
         {/* Timeline - desktop side-by-side, mobile full width */}
