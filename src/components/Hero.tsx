@@ -8,9 +8,9 @@ export default function Hero() {
   const [text] = useTypewriter({ words: ['Will Huang!'], loop: false });
 
   return (
-    <section id="wh" className="min-h-screen flex flex-col justify-center items-center px-4 text-text">
+    <section id="wh" className="min-h-screen flex flex-col justify-center items-center px-4 pt-32 md:pt-4 text-text">
       <div className="bg-box/80 backdrop-blur-sm border border-white/20 rounded-xl w-full max-w-4xl shadow-2xl relative">
-        {/* Little Character on top right */}
+        {/* SMISKI*/}
         <div className="absolute -top-32 -right-3 z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
@@ -19,7 +19,7 @@ export default function Hero() {
             className="relative"
           >
             <Image
-              src="/smiski.png" // Add your character PNG here
+              src="/smiski.png"
               alt="Character mascot"
               width={200}
               height={200}

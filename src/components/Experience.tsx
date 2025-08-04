@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import TimelineItem, { ExperienceItem } from './TimelineItem';
 import ExperienceDetails from './ExperienceDetails';
@@ -70,8 +70,12 @@ export default function Experience() {
       <h2 className='text-3xl font-bold mb-12 text-center'>Experience</h2>
       
       <div className='flex gap-8 max-w-6xl mx-auto w-full'>
-        {/* Timeline - moves left when item is selected */}
-        <div className={`relative transition-all duration-500 ${selectedItem !== null ? 'w-1/3' : 'w-full flex justify-center'}`}>
+        {/* Timeline - desktop side-by-side, mobile full width */}
+        <div className={`relative transition-all duration-500 ${
+          selectedItem !== null 
+            ? 'w-full lg:w-1/3' 
+            : 'w-full flex justify-center'
+        }`}>
           <div className='relative border-s border-primary ml-4'>
             {items.map((item, i) => (
               <TimelineItem
@@ -85,16 +89,44 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* Expanded Content - appears on the right */}
+        {/* Desktop Expanded Content - only shows on lg+ screens */}
         <AnimatePresence>
           {selectedItem !== null && (
-            <ExperienceDetails
-              item={items[selectedItem]}
-              onClose={handleClose}
-            />
+            <div className="hidden lg:block w-2/3">
+              <ExperienceDetails
+                item={items[selectedItem]}
+                onClose={handleClose}
+              />
+            </div>
           )}
         </AnimatePresence>
       </div>
+
+      {/* Mobile Modal Overlay - only shows on screens smaller than lg */}
+      <AnimatePresence>
+        {selectedItem !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 lg:hidden"
+            onClick={handleClose}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-box/90 backdrop-blur-md border border-white/20 rounded-xl p-6 max-w-md w-full max-h-[80vh] overflow-y-auto"
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
+            >
+              <ExperienceDetails
+                item={items[selectedItem]}
+                onClose={handleClose}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
