@@ -5,7 +5,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Hero() {
-  const [text] = useTypewriter({ words: ['Will Huang!'], loop: false });
+  const [text] = useTypewriter({ 
+    words: ['Will Huang!'], 
+    loop: false,
+    typeSpeed: 100,
+    deleteSpeed: 50
+  });
 
   return (
     <section id="wh" className="min-h-screen flex flex-col justify-center items-center px-4 pt-32 md:pt-4 text-text">

@@ -17,11 +17,11 @@ export default function About() {
   const [lastInteraction, setLastInteraction] = useState(Date.now());
   const [showConfetti, setShowConfetti] = useState(false);
 
-  // Auto-rotate every 3 seconds, reset when user interacts
+  // Auto-rotate every 4 seconds, reset when user interacts
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhoto((prev) => (prev + 1) % photos.length);
-    }, 3000);
+    }, 4000); // Increased from 3000 to 4000
 
     return () => clearInterval(interval);
   }, [photos.length, lastInteraction]);
