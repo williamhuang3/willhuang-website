@@ -7,7 +7,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function About() {
   const photos = [
-    '/me.JPEG',
+    '/ME.jpeg',
     '/me2.jpeg', // Add more photos here
     '/me3.jpeg',
     '/me4.jpg'
