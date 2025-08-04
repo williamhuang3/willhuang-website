@@ -52,13 +52,15 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold leading-tight"
+            className="text-4xl md:text-7xl font-bold leading-tight min-h-[140px] md:min-h-[160px] flex flex-col items-center justify-center"
           >
-            Hi, I&apos;m{' '}
-            <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
-              {text}
+            <span className="text-center">
+              Hi, I&apos;m{' '}
+              <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
+                {text}
+              </span>
+              <Cursor cursorStyle="|" cursorColor="#7FED64" />
             </span>
-            <Cursor cursorStyle="|" cursorColor="#7FED64" />
           </motion.h1>
 
           <motion.p
