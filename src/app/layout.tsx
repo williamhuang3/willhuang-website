@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'William Huang',
-  description: 'Portfolio',
+  title: 'Will Huang',
+  description: 'Personal SWE Portfolio',
   icons: {
     icon: '/favicon.ico', // or '/your-icon.png'
     shortcut: '/favicon.ico',
