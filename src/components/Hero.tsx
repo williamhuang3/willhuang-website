@@ -36,7 +36,7 @@ export default function Hero() {
             <span className="w-3 h-3 rounded-full bg-green-500"></span>
           </div>
           <div className="flex-1 flex justify-center">
-            <span className="text-xs text-text/60">william-huang.dev</span>
+            <span className="text-xs text-text/60">willhuang.xyz</span>
           </div>
           <div className="w-[54px]"></div> {/* Spacer to balance the buttons */}
         </div>
