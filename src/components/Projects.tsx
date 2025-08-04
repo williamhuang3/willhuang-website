@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 type Project = { 
   title: string; 
@@ -63,6 +64,12 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   return (
     <section id='projects' className='min-h-screen px-4 py-24 text-text'>
       <div className='max-w-7xl mx-auto'>
@@ -77,16 +84,21 @@ export default function Projects() {
         
         {/* Projects Grid Container */}
         <div className='bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8'>
-          <div className='grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
+          <motion.div 
+            className='grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {projects.map((project, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15, duration: 0.5, ease: "easeOut" }}
                 className='group relative bg-box/60 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-300'
-                whileHover={{ y: -5 }}
+                whileHover={!isTouchDevice ? { y: -5 } : {}}
               >
                 {/* Project Image */}
                 <div className='relative h-48 overflow-hidden'>
@@ -150,7 +162,7 @@ export default function Projects() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
