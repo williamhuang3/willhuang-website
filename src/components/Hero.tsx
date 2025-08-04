@@ -9,7 +9,8 @@ export default function Hero() {
     words: ['Will Huang!'], 
     loop: false,
     typeSpeed: 100,
-    deleteSpeed: 50
+    deleteSpeed: 50,
+    delaySpeed: 2000
   });
 
   return (
