@@ -123,7 +123,7 @@ export default function Projects() {
                     <a
                       href={project.repo}
                       target='_blank'
-                      rel='noreferrer'
+                      rel='noopener noreferrer'
                       className='flex items-center gap-2 px-4 py-2 bg-box/80 hover:bg-primary/20 border border-white/20 hover:border-primary/30 rounded-lg text-text hover:text-primary transition-all duration-300 text-sm font-medium'
                     >
                       <FaGithub className='w-4 h-4' />
@@ -134,7 +134,7 @@ export default function Projects() {
                       <a
                         href={project.live}
                         target='_blank'
-                        rel='noreferrer'
+                        rel='noopener noreferrer'
                         className='flex items-center gap-2 px-4 py-2 bg-primary/20 hover:bg-primary/30 border border-primary/30 hover:border-primary/50 rounded-lg text-primary hover:text-white transition-all duration-300 text-sm font-medium'
                       >
                         <FaExternalLinkAlt className='w-3 h-3' />

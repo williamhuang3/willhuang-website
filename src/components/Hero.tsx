@@ -81,6 +81,8 @@ export default function Hero() {
           >
             <a
               href="/William Huang Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group px-8 py-3 rounded-lg bg-primary/20 backdrop-blur-sm text-text border border-primary/30 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 flex items-center gap-2 font-medium"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,6 +107,8 @@ export default function Hero() {
           >
             <a 
               href="https://github.com/williamhuang3" 
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
               className="text-text/70 hover:text-primary hover:scale-110 transition-all duration-300"
             >
@@ -112,6 +116,8 @@ export default function Hero() {
             </a>
             <a 
               href="https://www.linkedin.com/in/whuang03/" 
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-text/70 hover:text-primary hover:scale-110 transition-all duration-300"
             >
@@ -119,6 +125,8 @@ export default function Hero() {
             </a>
             <a 
               href="https://instagram.com/whu4ng" 
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-text/70 hover:text-primary hover:scale-110 transition-all duration-300"
             >
