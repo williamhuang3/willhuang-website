@@ -70,7 +70,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-lg md:text-xl text-text/80 max-w-2xl leading-relaxed"
           >
-            Software Engineer passionate about creating innovative, impactful solutions.
+            Software Engineer based in SF, passionate about building apps, pipelines, and ML tools to simplify complex tasks and improve the lives of consumers and businesses.
           </motion.p>
 
           <motion.div

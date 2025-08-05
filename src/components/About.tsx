@@ -177,8 +177,10 @@ export default function About() {
                   ).
                 </p>
                 <p>
-                  A big motivation of mine is to create solutions that tackle difficult, tedious, or complex problems, and generally
-                  spread positive impact through technology, whether that be through small web apps or large-scale systems. 
+                  A big motivation of mine is to create solutions that simplify complex, 
+                  tedious, and time-consuming problems, or democratize knowledge in a certain domain. Whether it&apos;s a small web app or a 
+                  large-scale system, I aim to create tech that&apos;s useful, efficient, 
+                  and has a positive impact.
                 </p>
                 <p>
                   When I&apos;m not coding, you&apos;ll find me at the gym, watching basketball, trying new food places, taking photos,
