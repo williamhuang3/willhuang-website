@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: 'A responsive portfolio website with animations and interactive components.',
     img: '/portfolio.png', 
     repo: 'https://github.com/williamhuang3/willhuang-website',
-    live: 'https://willhuang.dev',
+    live: 'https://www.williamhuang.xyz',
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel']
   },
   { 
