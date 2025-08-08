@@ -43,7 +43,8 @@ const projects: Project[] = [
     description: 'App for early drug discovery using AI to identify and evaluate potential drug candidates from the ChemBL database with Random Forest regression.',
     img: '/drug.png', 
     repo: 'https://github.com/williamhuang3/ml-based-drug-identifier',
-    tech: ['Python', 'Random Forest', 'ChemBL API', 'RDKit']
+    live: 'https://drug-predict-ml.vercel.app/',
+    tech: ['Python Flask', 'Render', 'Vercel', 'Next.js', 'Tailwind CSS', 'Random Forest', 'ChemBL API']
   },
   { 
     title: 'Crop Disease Detector', 
